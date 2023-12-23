@@ -4,68 +4,240 @@ Robert Pearce
 12/20/2023
 */
 
+/* Colors */
 :root {
-  --jet         : #323232;
-  --indigoDye   : #09405B;
-  --pictonBlue  : #00A5E0;
-  --mintGreen   : #D7F1EC;
-  --White       : #FFFFFF;
+  --jet: #323232;
+  --indigoDye: #09405B;
+  --pictonBlue: #00A5E0;
+  --mintGreen: #D7F1EC;
+  --White: #FFFFFF;
 }
 
-/* Section for nav bar. */
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-  }
+/* Reset and global styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "Montserrat", sans-serif;
+}
 
-  .body-text {  
-    display: flex;
-    font-family: "Montserrat", sans-serif;
-    align-items: center;
-    justify-content: center;
-    margin-top: 250px;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: var(--jet);
-    font-family: "Montserrat", sans-serif;
-  }
-  
-  .heading {
-    color: var(--White);
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
-  }
-  
-  .nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-  }
-  
-  .nav-links li {
-    list-style: none;
-  }
-  
-  .nav-links a {
-    color: var(--White);
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 14px 16px;
-  }
-  
-  .nav-links a:hover:not(.active) {
-    background-color: var(--indigoDye);
-  }
-  
-  .nav-links li a.active {
-    background-color: var(--indigoDye);
-  }
+/* Other styles for navigation, etc. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Text */
+.body-text {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: var(--jet);
+  font-family: "Montserrat", sans-serif;
+}
+
+.heading {
+  color: var(--White);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--White);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 14px 16px;
+}
+
+.nav-links a:hover:not(.active) {
+  background-color: var(--indigoDye);
+}
+
+.nav-links li a.active {
+  background-color: var(--indigoDye);
+}
+
+/* Hero and Sections */
+.hero,
+.section1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Image */
+.background-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.mountains-stock {
+  background-image: url('images/mountains-stock.webp');
+}
+
+.man-phone-stock {
+  background-image: url('images/man-phone-stock.webp');
+  background-position: center top 20%; /* Adjust position as needed */
+}
+
+/* Quote and Button */
+.quote {
+  position: absolute;
+  top: 40%;
+  left: 2%;
+  color: var(--White);
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 80px;
+  max-width: 70%;
+}
+
+.contact-btn {
+  position: absolute;
+  bottom: 25%;
+  left: 10%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--pictonBlue);
+  color: var(--mintGreen);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: var(--indigoDye); /* Darker shade for hover */
+}
+
+/* Section 1 Styles */
+.section1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--White);
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  max-height: 50%; /* Adjust image height as needed */
+}
+
+.text-container {
+  flex: 1;
+  margin-left: 20px; /* Adjust spacing between image and text */
+}
+
+.text-container h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: var(--pictonBlue);
+}
+
+.text-container p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--jet);
+  font-weight: bold;
+}
+
+/* Section 2 Styles */
+.section2 {
+  width: 100%;
+  height: 80vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--White);
+  text-align: center;
+}
+
+.section2 .image-overlay {
+  position: relative;
+  max-width: 100%;
+}
+
+.section2 .image-overlay img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section2 .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--White);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.section2 .overlay-text h2 {
+  margin-bottom: 10px;
+}
+
+.section2 .columns-container {
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.section2 .column {
+  width: 10%; /* Adjust column width as needed */
+  margin: 80px;
+}
+
+.section2 .column p {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--White);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+/* Your existing CSS */
+/* ... (retain your existing styles) */
